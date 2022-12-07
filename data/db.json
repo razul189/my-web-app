@@ -18,7 +18,23 @@
       "price": 8000,
       "brand": "Honda"
     },
-    { "id": 4, "model": 2005, "price": 14000, "brand": "Toyota" },
-    { "id": 5, "model": 2019, "price": 20000, "brand": "Audi" }
+    {
+      "id": 4,
+      "model": 2005,
+      "price": 14000,
+      "brand": "Toyota"
+    },
+    {
+      "id": 5,
+      "model": 2019,
+      "price": 20000,
+      "brand": "Audi"
+    },
+    {
+      "id": 6,
+      "model": "2004",
+      "brand": "toyota",
+      "carPrice": "6000"
+    }
   ]
 }

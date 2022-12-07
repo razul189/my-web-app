@@ -6,6 +6,33 @@ let apiCars = [];
 
 document.addEventListener("DOMContentLoaded", main);
 
+// select all the inputs and form
+const form = document.querySelector("form");
+const carModel = document.querySelector("#car-model");
+const carBrand = document.querySelector("#car-brand");
+const carPrice = document.querySelector("#car-price");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const newCar = {
+    model: carModel.value,
+    brand: carBrand.value,
+    carPrice: carPrice.value,
+  };
+
+  fetch("http://localhost:3000/cars", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify(newCar),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+});
+
 function main() {
   fetch("http://localhost:3000/cars/", {
     method: "GET",
