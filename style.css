@@ -6,6 +6,7 @@ h1 {
   text-align: center;
   background-color: rgb(108, 108, 184);
   text-transform: uppercase;
+  border-radius: 10px;
 }
 
 .app {
