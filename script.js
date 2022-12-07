@@ -28,12 +28,13 @@ btnShow.addEventListener("click", function () {
     });
 });
 
-document.querySelector("body").addEventListener("mousemove", function () {
-  console.log("my mouse is moving");
-});
 
-document.querySelector("body").addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    console.log(" you have pressed Enter");
-  }
-});
+// document.querySelector("body").addEventListener("mousemove", function () {
+//   console.log("my mouse is moving");
+// });
+
+// document.querySelector("body").addEventListener("keypress", function (event) {
+//   if (event.key === "Enter") {
+//     console.log(" you have pressed Enter");
+//   }
+// });
