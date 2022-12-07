@@ -2,10 +2,11 @@
 // h2.textContent = "this is new content";
 // document.querySelector("body").appendChild(h2);
 
-// select the button
-const btnShow = document.getElementById("btn-show");
+let apiCars = [];
 
-btnShow.addEventListener("click", function () {
+document.addEventListener("DOMContentLoaded", main);
+
+function main() {
   fetch("http://localhost:3000/cars/", {
     method: "GET",
     headers: {
@@ -17,8 +18,8 @@ btnShow.addEventListener("click", function () {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
       const cars = data;
+      apiCars = [...data];
 
       cars.forEach((car) => {
         const listItem = document.createElement("li");
@@ -26,8 +27,7 @@ btnShow.addEventListener("click", function () {
         document.querySelector("ul").appendChild(listItem);
       });
     });
-});
-
+}
 
 // document.querySelector("body").addEventListener("mousemove", function () {
 //   console.log("my mouse is moving");
