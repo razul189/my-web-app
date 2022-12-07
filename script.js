@@ -15,6 +15,10 @@ const carPrice = document.querySelector("#car-price");
 // select search input
 const search = document.querySelector(".search");
 
+// adding event listener for search box
+
+
+
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
