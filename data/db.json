@@ -1,0 +1,24 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "model": 2022,
+      "price": 15000,
+      "brand": "Tesla"
+    },
+    {
+      "id": 2,
+      "model": 2023,
+      "price": 25000,
+      "brand": "Honda"
+    },
+    {
+      "id": 3,
+      "model": 2000,
+      "price": 8000,
+      "brand": "Honda"
+    },
+    { "id": 4, "model": 2005, "price": 14000, "brand": "Toyota" },
+    { "id": 5, "model": 2019, "price": 20000, "brand": "Audi" }
+  ]
+}

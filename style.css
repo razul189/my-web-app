@@ -1,10 +1,16 @@
 body {
-    background:red;
-  }
-  h1 {
-    color: red
-  }
-  h2 {
-    color: green
-  }
-  
+}
+h1 {
+  color: red;
+}
+h2 {
+  color: green;
+}
+
+.app {
+  width: 968px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
