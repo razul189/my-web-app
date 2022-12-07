@@ -19,22 +19,19 @@ function main() {
     })
     .then(function (data) {
       const cars = data;
-      apiCars = [...data];
 
-      cars.forEach((car) => {
-        const listItem = document.createElement("li");
-        listItem.textContent = car.brand;
-        document.querySelector("ul").appendChild(listItem);
-      });
+      // keeping cars in global variable for later use
+      apiCars = [...data];
+      showCars(cars);
     });
 }
 
-// document.querySelector("body").addEventListener("mousemove", function () {
-//   console.log("my mouse is moving");
-// });
+function showCars(cars) {
+  let carsList = document.querySelector(".cars");
 
-// document.querySelector("body").addEventListener("keypress", function (event) {
-//   if (event.key === "Enter") {
-//     console.log(" you have pressed Enter");
-//   }
-// });
+  cars.forEach((car) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = car.brand;
+    carsList.appendChild(listItem);
+  });
+}
