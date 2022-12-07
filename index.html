@@ -7,12 +7,28 @@
   <body>
     <div class="app">
       <h1>Cars Managment</h1>
-      <button id="btn-show">Show Cars</button>
+
+      <form>
+        <div class="input-group">
+          <label for="car-model">Car Model</label>
+          <input type="number" placeholder="1999" id="car-model" />
+        </div>
+
+        <div class="input-group">
+          <label for="car-brand">Car Brand</label>
+          <input type="text" placeholder="Tesla" id="car-brand" />
+        </div>
+
+        <div class="input-group">
+          <label for="car-price">Car Price ($)</label>
+          <input type="number" placeholder="8000" id="car-price" />
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
       <ul class="cars"></ul>
     </div>
 
-    <script src="script.js" type="text/javascript">
-      
-    </script>
+    <script src="script.js" type="text/javascript"></script>
   </body>
 </html>
