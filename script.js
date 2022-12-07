@@ -16,8 +16,15 @@ const carPrice = document.querySelector("#car-price");
 const search = document.querySelector(".search");
 
 // adding event listener for search box
-
-
+search.addEventListener("keypress", function (event) {
+  const value = event.target.value;
+  const filteredCars = apiCars.filter(function (car) {
+    if (car.brand.toUpperCase().includes(value.toUpperCase())) {
+      return car;
+    }
+  });
+  showCars(filteredCars);
+});
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -62,6 +69,7 @@ function main() {
 
 function showCars(cars) {
   let carsList = document.querySelector(".cars");
+  carsList.innerHTML = "";
 
   cars.forEach((car) => {
     const listItem = document.createElement("li");
