@@ -31,6 +31,13 @@ form {
   padding: 5px;
 }
 
+.search {
+  padding: 10px;
+  border-radius: 5px;
+  width: 200px;
+  margin: 10px auto;
+}
+
 .cars {
   list-style: none;
   text-align: center;

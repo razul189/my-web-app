@@ -12,6 +12,9 @@ const carModel = document.querySelector("#car-model");
 const carBrand = document.querySelector("#car-brand");
 const carPrice = document.querySelector("#car-price");
 
+// select search input
+const search = document.querySelector(".search");
+
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
