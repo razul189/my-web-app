@@ -1,7 +1,3 @@
-// const h2 = document.createElement("h2");
-// h2.textContent = "this is new content";
-// document.querySelector("body").appendChild(h2);
-
 let apiCars = [];
 
 document.addEventListener("DOMContentLoaded", main);
@@ -17,7 +13,10 @@ const search = document.querySelector(".search");
 
 // adding event listener for search box
 search.addEventListener("keypress", function (event) {
+
   const value = event.target.value;
+  // tesla =TESLA
+  // tes = TES
   const filteredCars = apiCars.filter(function (car) {
     if (car.brand.toUpperCase().includes(value.toUpperCase())) {
       return car;
@@ -29,10 +28,11 @@ search.addEventListener("keypress", function (event) {
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
+
   const newCar = {
     model: carModel.value,
     brand: carBrand.value,
-    carPrice: carPrice.value,
+    price: carPrice.value,
   };
 
   fetch("http://localhost:3000/cars", {
@@ -47,22 +47,16 @@ form.addEventListener("submit", function (event) {
     .then((data) => console.log(data));
 });
 
+
 function main() {
-  fetch("http://localhost:3000/cars/", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-  })
+  fetch("http://localhost:3000/cars/")
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
       const cars = data;
-
       // keeping cars in global variable for later use
-      apiCars = [...data];
+      apiCars = [...cars]; //spread operator
       showCars(cars);
     });
 }
