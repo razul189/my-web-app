@@ -1,6 +1,6 @@
-const h2 = document.createElement("h2");
-h2.textContent = "this is new content";
-document.querySelector("body").appendChild(h2);
+// const h2 = document.createElement("h2");
+// h2.textContent = "this is new content";
+// document.querySelector("body").appendChild(h2);
 
 // select the button
 const btnShow = document.getElementById("btn-show");
